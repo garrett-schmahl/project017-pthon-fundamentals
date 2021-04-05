@@ -92,7 +92,7 @@ print(maximumList([]))
 # 8. Ultimate Analysis - Create a function that takes a list and returns a dictionary that has the sumTotal, average, minimum, maximum and length of the list.
 # Example: ultimate_analysis([37,2,1,-9]) should return {'sumTotal': 31, 'average': 7.75, 'minimum': -9, 'maximum': 37, 'length': 4 }
 
-def analatron5000(x):
+def analatron5000(x):  # :^)
   analDict = {
     'sumTotal': sumList(x),
     'average': avgList(x),
@@ -101,6 +101,29 @@ def analatron5000(x):
     'length': listLength(x)}
   return analDict
 print(analatron5000([37,2,1,-9]))
+
+#real answer
+def ultimateAnalysis(x):
+  sum = 0
+  average = 0
+  minimum = x[0]
+  maximum = x[0]
+  length = len(x)
+  for i in range(0,len(x),1):
+    if x[i] > maximum:
+      maximum = x[i]
+    if x[i] < minimum:
+      minimum = x[i]
+    sum += x[i]
+  average = sum/length
+  analysisDict = {
+    'sumTotal': sum,
+    'average': average,
+    'minimum': minimum,
+    'maximum': maximum,
+    'length': length}
+  return analysisDict
+print(ultimateAnalysis([37,2,1,-9]))
 
 
 # 9. Reverse List - Create a function that takes a list and return that list with values reversed. Do this without creating a second list. (This challenge is known to appear during basic technical interviews.)
