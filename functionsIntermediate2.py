@@ -80,7 +80,7 @@ iterateDictionary(students)
 def iterateDictionary2(key_name, some_list):
   for i in range(0, len(some_list), 1):
     for key in some_list[i].keys():
-      if key == "first_name":
+      if key == key_name:
         print(some_list[i][key])
 iterateDictionary2('first_name', students) 
 

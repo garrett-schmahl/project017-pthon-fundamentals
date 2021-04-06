@@ -9,8 +9,7 @@ class User:
     self.email = email
     self.accounts = {
       "checking": BankAccount(),
-      "saving": BankAccount(0, .02)
-    }
+      "saving": BankAccount(0, .02)}
 
   def deposit(self, amount, accountType):
     self.accounts[accountType].balance += amount
