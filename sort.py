@@ -36,6 +36,6 @@ def insertionSort(sortDict):
         else:
           sortDict[j] = sortDict[j-1]
   return True
-selectionSort(myNewDict)
+insertionSort(myNewDict)
 print(myNewDict)
   
